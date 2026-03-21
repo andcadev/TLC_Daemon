@@ -107,7 +107,7 @@ Central component responsible for managing the task lifecycle.
 | Method | Description |
 |---|---|
 | `New(task)` | Creates a new controller and associates the task |
-| `Start()` | Launches the task asynchronously. Monouso. |
+| `Start()` | Launches the task asynchronously. Single use |
 | `Stop(timeout)` | Requests stop and waits for completion |
 | `IsRunning()` | Checks actual execution state; collects result if already finished |
 | `Destroy(timeout)` | Calls `Stop` if the task is still running, then returns `ITask out` |
