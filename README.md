@@ -37,6 +37,48 @@ Each task:
 
 The system is built around three main components. Each component has a single responsibility and interacts through well-defined interfaces.
 
+```mermaid
+classDiagram
+    class ITask {
+        <<interface>>
+        +GetTaskReference() VI Ref
+        +GetStopMechanism() ITaskStopMechanism
+    }
+
+    class ITaskStopMechanism {
+        <<interface>>
+        +RequestStop() void
+    }
+
+    class TaskController {
+        -task ITask
+        -asyncRef AsyncCallRef
+        -cachedResult ITask
+        +New(task ITask) TaskController
+        +Start() void
+        +Stop(timeout) void
+        +IsRunning() bool
+        +Destroy(timeout) ITask
+    }
+
+    class ConcreteTask {
+        -config
+        -stopMechanism
+        +GetTaskReference() VI Ref
+        +GetStopMechanism() ITaskStopMechanism
+    }
+
+    class ConcreteStopMechanism {
+        -notifierRef NotifierRef
+        +RequestStop() void
+    }
+
+    ITask <|.. ConcreteTask : implements
+    ITaskStopMechanism <|.. ConcreteStopMechanism : implements
+    TaskController ..> ITask : uses
+    TaskController ..> ITaskStopMechanism : uses
+```
+
 ### `ITask` (Interface)
 
 Defines the contract for any task.
@@ -64,26 +106,35 @@ Central component responsible for managing the task lifecycle.
 
 | Method | Description |
 |---|---|
-| `Start(task)` | Launches the task asynchronously |
-| `Stop(timeout)` | Requests stop, waits for completion, returns `ITask out` |
+| `New(task)` | Creates a new controller and associates the task |
+| `Start()` | Launches the task asynchronously. Monouso. |
+| `Stop(timeout)` | Requests stop and waits for completion |
 | `IsRunning()` | Checks actual execution state; collects result if already finished |
+| `Destroy(timeout)` | Calls `Stop` if the task is still running, then returns `ITask out` |
 
 
 ## Execution Flow
 
-### Start
+### New + Start
 
-1. `TaskController.Start(task)` is called
-2. Controller retrieves the VI reference via `ITask.GetTaskReference()`
-3. VI is launched asynchronously
-4. Async call reference is stored internally
+1. `TaskController.New(task)` is called — the task is associated with the controller
+2. `TaskController.Start()` is called
+3. Controller retrieves the VI reference via `ITask.GetTaskReference()`
+4. VI is launched asynchronously
+5. Async call reference is stored internally
 
 ### Stop
 
 1. `TaskController.Stop(timeout)` is called
 2. Controller calls `RequestStop()` on the stop mechanism
 3. Controller waits via `Wait on Asynchronous Call`
-4. On completion, `ITask out` is retrieved and returned to the caller
+4. `ITask out` is retrieved and cached internally
+
+### Destroy
+
+1. `TaskController.Destroy(timeout)` is called
+2. If the task is still running, `Stop` is called internally
+3. The cached `ITask out` is returned to the caller
 
 ### Passive Completion
 
