@@ -35,7 +35,7 @@ Each task:
 
 ## Architecture
 
-The system is built around three main components.
+The system is built around three main components. Each component has a single responsibility and interacts through well-defined interfaces.
 
 ### `ITask` (Interface)
 
@@ -129,8 +129,7 @@ Logic:
     Return updated task as ITask out
 ```
 
-> **Note:** The cast is the responsibility of the task implementer. The controller does not validate class/VI compatibility.
-
+> **Note:** The cast is the responsibility of the task implementer. The controller does not validate class/VI compatibility. A mismatch between the task class and the VI will result in a runtime error.
 
 ## Example
 
@@ -164,7 +163,7 @@ On stop:
 
 ## Stop Mechanism Design
 
-Stop is always **cooperative (soft stop)**. The controller triggers the stop; the task decides how and when to exit cleanly.
+Stop is always **cooperative (soft stop)**. The controller triggers the stop; the task owns the shutdown.
 
 Supported patterns:
 
@@ -186,6 +185,7 @@ State is updated only when `IsRunning()` or `Stop()` is called. Internally, the 
 - Cached `ITask out`
 
 The async result is collected **only once** and then cached. `Stop()` is safe to call even after the task has already completed (it returns the cached result without error).
+This approach keeps the controller lightweight while ensuring consistency when interacting with completed tasks.
 
 
 ## Design Goals
@@ -206,7 +206,7 @@ Use it when you need:
 - Pluggable stop mechanisms
 - Reusable async execution patterns
 
-TLC_Daemon is intentionally minimal. Task orchestration, messaging, and more complex patterns can be built on top of it. This toolkit may provide the foundation, not the full building.
+TLC_Daemon is intentionally minimal. Task orchestration, messaging, and more complex patterns can be built on top of it. This toolkit may provide the foundation, not the full solution.
 
 ## Requirements
 
