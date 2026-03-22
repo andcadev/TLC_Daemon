@@ -41,31 +41,32 @@ The system is built around three main components. Each component has a single re
 classDiagram
     class ITask {
         <<interface>>
-        +GetTaskReference() VI Ref
-        +GetStopMechanism() ITaskStopMechanism
+        +getTaskReference(VIRefnum) void
+        +getStopMechanism() ITaskStopMechanism
     }
 
     class ITaskStopMechanism {
         <<interface>>
-        +RequestStop() void
+        +requestStop() void
     }
 
     class TaskController {
-        -task ITask
-        -asyncRef AsyncCallRef
-        -cachedResult ITask
-        +New(task ITask) TaskController
-        +Start() void
-        +Stop(timeout) void
-        +IsRunning() bool
-        +Destroy(timeout) ITask
+        -task : ITask
+        -stopMechanism : ITaskStopMechanism
+        -taskRef : VIRefnum
+        -cachedResult : ITask
+        +new(task ITask) TaskController
+        +start() void
+        +stop(timeout) void
+        +isRunning() bool
+        +destroy(timeout) ITask
     }
 
     class ConcreteTask {
         -config
-        -stopMechanism
-        +GetTaskReference() VI Ref
-        +GetStopMechanism() ITaskStopMechanism
+        -stopMechanism : ITaskStopMechanism
+        +getTaskReference() VIRefnum
+        +getStopMechanism() ITaskStopMechanism
     }
 
     class ConcreteStopMechanism {
@@ -85,7 +86,7 @@ Defines the contract for any task.
 
 | Method | Returns |
 |---|---|
-| `GetTaskReference()` | `VI Ref` |
+| `GetTaskReference()` | `VIRefnum` |
 | `GetStopMechanism()` | `ITaskStopMechanism` |
 
 ### `ITaskStopMechanism` (Interface)
