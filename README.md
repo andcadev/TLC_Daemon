@@ -47,6 +47,7 @@ classDiagram
     class ITaskStopMechanism {
         <<interface>>
         +requestStop() void
+        +destroy() void
     }
     class TaskController {
         -task : ITask
@@ -57,7 +58,7 @@ classDiagram
         +start() void
         +stop(timeout : int) void
         +isRunning() bool
-        +destroy(timeout : int) ITask
+        +destroy(timeout : int, requestStopMechDestroy : Bool) ITask
     }
     class ConcreteTask {
         -config
@@ -94,8 +95,8 @@ Defines the contract for any task.
 
 | Method | Returns |
 |---|---|
-| `GetTaskReference()` | `VIRefnum` |
-| `GetStopMechanism()` | `ITaskStopMechanism` |
+| `getTaskReference()` | `VIRefnum` |
+| `getStopMechanism()` | `ITaskStopMechanism` |
 
 ### `ITaskStopMechanism` (Interface)
 
@@ -103,7 +104,7 @@ Encapsulates how a task is requested to stop.
 
 | Method | Description |
 |---|---|
-| `RequestStop()` | Signals the task to stop |
+| `requestStop()` | Signals the task to stop |
 
 The `TaskController` does not need to know *how* the stop works, only that it can trigger it.
 
@@ -117,11 +118,11 @@ Central component responsible for managing the task lifecycle.
 
 | Method | Description |
 |---|---|
-| `New(task)` | Creates a new controller and associates the task |
-| `Start()` | Launches the task asynchronously. Single use |
-| `Stop(timeout)` | Requests stop and waits for completion |
-| `IsRunning()` | Checks actual execution state; collects result if already finished |
-| `Destroy(timeout)` | Calls `Stop` if the task is still running, then returns `ITask out` |
+| `new(task)` | Creates a new controller and associates the task |
+| `start()` | Launches the task asynchronously. Single use |
+| `stop(timeout)` | Requests stop and waits for completion |
+| `isRunning()` | Checks actual execution state; collects result if already finished |
+| `destroy(timeout)` | Calls `Stop` if the task is still running, then returns `ITask out` |
 
 
 ## Execution Flow
@@ -172,8 +173,8 @@ LabVIEW enforces connector pane compatibility natively when the VI is launched a
 
 Store configuration data in the class private data, and implement:
 
-- `GetTaskReference()` — returns the VI reference for this task
-- `GetStopMechanism()` — returns the appropriate stop mechanism
+- `getTaskReference()` — returns the VI reference for this task
+- `getStopMechanism()` — returns the appropriate stop mechanism
 
 ### 2. Write the task VI
 
@@ -205,8 +206,8 @@ Private Data:
   - queue ref      : Queue Ref
   - stop notifier  : Notifier Ref
 
-GetTaskReference()  → DataLoggingTask.vi
-GetStopMechanism()  → NotifierStopMechanism
+getTaskReference()  → DataLoggingTask.vi
+getStopMechanism()  → NotifierStopMechanism
 ```
 
 ### `DataLoggingTask.vi` behavior
