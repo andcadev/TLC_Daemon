@@ -41,41 +41,49 @@ The system is built around three main components. Each component has a single re
 classDiagram
     class ITask {
         <<interface>>
-        +getTaskReference(VIRefnum) void
+        +getTaskReference() VIRefnum
         +getStopMechanism() ITaskStopMechanism
     }
-
     class ITaskStopMechanism {
         <<interface>>
         +requestStop() void
     }
-
     class TaskController {
         -task : ITask
         -stopMechanism : ITaskStopMechanism
         -taskRef : VIRefnum
         -cachedResult : ITask
-        +new(task ITask) TaskController
+        +new(task : ITask) TaskController
         +start() void
-        +stop(timeout) void
+        +stop(timeout : int) void
         +isRunning() bool
-        +destroy(timeout) ITask
+        +destroy(timeout : int) ITask
     }
-
     class ConcreteTask {
         -config
         -stopMechanism : ITaskStopMechanism
         +getTaskReference() VIRefnum
         +getStopMechanism() ITaskStopMechanism
     }
-
-    class ConcreteStopMechanism {
-        -notifierRef NotifierRef
-        +RequestStop() void
+    class NotifierStopMechanism {
+        -notifierRef : NotifierRef
+        +requestStop() void
+        +getNotifierRef() NotifierRef
     }
-
+    class QueueStopMechanism {
+        -queueRef : QueueRef
+        +requestStop() void
+        +getQueueRef() QueueRef
+    }
+    class UserEventStopMechanism {
+        -userEvent : UserEvent
+        +requestStop() void
+        +getUserEvent() UserEvent
+    }
     ITask <|.. ConcreteTask : implements
-    ITaskStopMechanism <|.. ConcreteStopMechanism : implements
+    ITaskStopMechanism <|.. NotifierStopMechanism : implements
+    ITaskStopMechanism <|.. QueueStopMechanism : implements
+    ITaskStopMechanism <|.. UserEventStopMechanism : implements
     TaskController ..> ITask : uses
     TaskController ..> ITaskStopMechanism : uses
 ```
@@ -91,15 +99,17 @@ Defines the contract for any task.
 
 ### `ITaskStopMechanism` (Interface)
 
-Encapsulates how a task is requested to stop.
+Encapsulates how a task is requested to stop. 
 
 | Method | Description |
 |---|---|
 | `RequestStop()` | Signals the task to stop |
 
-Typical implementations: Boolean notifier, queue-based messaging, user events.
-
 The `TaskController` does not need to know *how* the stop works, only that it can trigger it.
+
+TLC_Daemon ships with three ready-to-use stop mechanism implementations covering the most common LabVIEW patterns: `NotifierStopMechanism` for boolean notifier-based stop, `UserEventStopMechanism` for event-driven stop, and `QueueStopMechanism` for message-based stop. Custom mechanisms can be added by implementing ITaskStopMechanism.
+
+`ITaskStopMechanism` intentionally exposes only `requestStop()` and not a dual `checkStop()` method. Reading the stop signal is always done directly by the task VI, which, after casting to the concrete type, has direct access to the underlying primitive. This avoids unnecessary dynamic dispatch overhead in the task loop and, more importantly, makes the pattern compatible with LabVIEW Event Structures: a user event must be handled inside an Event Structure in the task VI itself, and cannot be encapsulated behind a method call.
 
 ### `TaskController`
 
