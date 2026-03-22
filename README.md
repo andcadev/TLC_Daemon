@@ -47,6 +47,7 @@ classDiagram
     class ITaskStopMechanism {
         <<interface>>
         +requestStop() void
+        +destroy() void
     }
     class TaskController {
         -task : ITask
@@ -57,7 +58,7 @@ classDiagram
         +start() void
         +stop(timeout : int) void
         +isRunning() bool
-        +destroy(timeout : int) ITask
+        +destroy(timeout : int, requestStopMechDestroy : Bool) ITask
     }
     class ConcreteTask {
         -config
