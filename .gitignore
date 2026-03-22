@@ -15,3 +15,7 @@
 *.aliases
 *.lvlps
 .cache/
+
+# VIPM build artifacts
+distributions/
+*.vip
