@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nidocument>
+<nicomment>
+
+<nifamily familyname="TLC_Daemon_Errors" displayname="TLC_Daemon_Errors">
+</nifamily>
+</nicomment>
+<nierror code="6001">
+Not allowed operation (Invalid task status)
+</nierror>
+<nierror code="6002">
+Task termination timeout
+</nierror>
+</nidocument>
