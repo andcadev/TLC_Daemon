@@ -93,6 +93,33 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1074278928</Property>
 	</Item>
+	<Item Name="test_launchBrokenTaskShouldReturnError1003.vi" Type="VI" URL="../test_launchBrokenTaskShouldReturnError1003.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%3!!!!#!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!&gt;'V2B=WN$&lt;WZU=G^M&lt;'6S6'6T&gt;(-O&lt;(:D&lt;'&amp;T=Q!.6'6T&gt;#"$98.F)%^V&gt;!!U1(!!(A!!(2N598.L1W^O&gt;(*P&lt;'RF=F2F=X2T,GRW9WRB=X-!$&amp;2F=X1A1W&amp;T:3"*&lt;A!!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!1!"!!%!!9$!!"Y!!!*!!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!"Q!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1074278928</Property>
+	</Item>
+	<Item Name="test_launchTaskWithInvalidConnectorPaneShouldReturnError1031.vi" Type="VI" URL="../test_launchTaskWithInvalidConnectorPaneShouldReturnError1031.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%3!!!!#!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!&gt;'V2B=WN$&lt;WZU=G^M&lt;'6S6'6T&gt;(-O&lt;(:D&lt;'&amp;T=Q!.6'6T&gt;#"$98.F)%^V&gt;!!U1(!!(A!!(2N598.L1W^O&gt;(*P&lt;'RF=F2F=X2T,GRW9WRB=X-!$&amp;2F=X1A1W&amp;T:3"*&lt;A!!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!1!"!!%!!9$!!"Y!!!*!!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!"Q!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1074266643</Property>
+	</Item>
+	<Item Name="test_notLaunchedTaskShouldReturnNoError.vi" Type="VI" URL="../test_notLaunchedTaskShouldReturnNoError.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%3!!!!#!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!&gt;'V2B=WN$&lt;WZU=G^M&lt;'6S6'6T&gt;(-O&lt;(:D&lt;'&amp;T=Q!.6'6T&gt;#"$98.F)%^V&gt;!!U1(!!(A!!(2N598.L1W^O&gt;(*P&lt;'RF=F2F=X2T,GRW9WRB=X-!$&amp;2F=X1A1W&amp;T:3"*&lt;A!!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!1!"!!%!!9$!!"Y!!!*!!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!"Q!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1074278928</Property>
+	</Item>
 	<Item Name="test_stopIfTaskAlreadyStoppedShouldReturnNoError.vi" Type="VI" URL="../test_stopIfTaskAlreadyStoppedShouldReturnNoError.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%3!!!!#!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!&gt;'V2B=WN$&lt;WZU=G^M&lt;'6S6'6T&gt;(-O&lt;(:D&lt;'&amp;T=Q!.6'6T&gt;#"$98.F)%^V&gt;!!U1(!!(A!!(2N598.L1W^O&gt;(*P&lt;'RF=F2F=X2T,GRW9WRB=X-!$&amp;2F=X1A1W&amp;T:3"*&lt;A!!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!1!"!!%!!9$!!"Y!!!*!!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!"Q!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
