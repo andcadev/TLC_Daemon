@@ -46,6 +46,8 @@ classDiagram
     }
     class ITaskStopMechanism {
         <<interface>>
+        +init() void
+        +isInitialized() bool
         +requestStop() void
         +destroy() void
     }
@@ -58,7 +60,7 @@ classDiagram
         +start() void
         +stop(timeout : int) void
         +isRunning() bool
-        +destroy(timeout : int, requestStopMechDestroy : Bool) ITask
+        +destroy(timeout : int, requestStopMechDestroy : bool) ITask
     }
     class ConcreteTask {
         -config
@@ -68,18 +70,27 @@ classDiagram
     }
     class NotifierStopMechanism {
         -notifierRef : NotifierRef
+        +init() void
+        +isInitialized() bool
         +requestStop() void
         +getNotifierRef() NotifierRef
+        +destroy() void
     }
     class QueueStopMechanism {
         -queueRef : QueueRef
+        +init() void
+        +isInitialized() bool
         +requestStop() void
         +getQueueRef() QueueRef
+        +destroy() void
     }
     class UserEventStopMechanism {
         -userEvent : UserEvent
+        +init() void
+        +isInitialized() bool
         +requestStop() void
         +getUserEvent() UserEvent
+        +destroy() void
     }
     ITask <|.. ConcreteTask : implements
     ITaskStopMechanism <|.. NotifierStopMechanism : implements
@@ -100,15 +111,31 @@ Defines the contract for any task.
 
 ### `ITaskStopMechanism` (Interface)
 
-Encapsulates how a task is requested to stop. 
+Encapsulates how a task is requested to stop.
 
 | Method | Description |
 |---|---|
+| `init()` | Initializes the stop mechanism (e.g. creates the notifier, queue, or user event) |
+| `isInitialized()` | Returns `True` if the mechanism is already initialized, `False` otherwise |
 | `requestStop()` | Signals the task to stop |
+| `destroy()` | Destroys the underlying primitive (e.g. releases the notifier or queue) |
 
 The `TaskController` does not need to know *how* the stop works, only that it can trigger it.
 
-TLC_Daemon ships with three ready-to-use stop mechanism implementations covering the most common LabVIEW patterns: `NotifierStopMechanism` for boolean notifier-based stop, `UserEventStopMechanism` for event-driven stop, and `QueueStopMechanism` for message-based stop. Custom mechanisms can be added by implementing ITaskStopMechanism.
+#### Initialization
+
+`ITaskStopMechanism` supports two initialization modes:
+
+- **Internal initialization**: the `TaskController` calls `init()` automatically during `start()` if `isInitialized()` returns `False`. The controller also owns the lifecycle of the mechanism and calls `destroy()` when appropriate.
+- **External initialization**: the mechanism is initialized before being passed to the task. `isInitialized()` returns `True`, so the `TaskController` skips `init()`. This is useful when the mechanism needs to be shared with other components — for example, a message queue used both to stop the task and to communicate with it from outside.
+
+> **Note:** Use external initialization carefully. The `TaskController` will call `requestStop()` on the mechanism, which may affect any external code sharing the same primitive.
+
+If any initialization parameters are needed (e.g. queue size), they must be set on the concrete class before passing it to the task — `init()` takes no arguments and relies entirely on the object's internal state.
+
+#### Built-in implementations
+
+TLC_Daemon ships with three ready-to-use stop mechanism implementations covering the most common LabVIEW patterns: `NotifierStopMechanism` for boolean notifier-based stop, `UserEventStopMechanism` for event-driven stop, and `QueueStopMechanism` for message-based stop. Custom mechanisms can be added by implementing `ITaskStopMechanism`.
 
 `ITaskStopMechanism` intentionally exposes only `requestStop()` and not a dual `checkStop()` method. Reading the stop signal is always done directly by the task VI, which, after casting to the concrete type, has direct access to the underlying primitive. This avoids unnecessary dynamic dispatch overhead in the task loop and, more importantly, makes the pattern compatible with LabVIEW Event Structures: a user event must be handled inside an Event Structure in the task VI itself, and cannot be encapsulated behind a method call.
 
@@ -122,35 +149,36 @@ Central component responsible for managing the task lifecycle.
 | `start()` | Launches the task asynchronously. Single use |
 | `stop(timeout)` | Requests stop and waits for completion |
 | `isRunning()` | Checks actual execution state; collects result if already finished |
-| `destroy(timeout)` | Calls `Stop` if the task is still running, then returns `ITask out` |
+| `destroy(timeout)` | Calls `stop` if the task is still running, then returns `ITask out` |
 
 
 ## Execution Flow
 
 ### New + Start
 
-1. `TaskController.New(task)` is called — the task is associated with the controller
-2. `TaskController.Start()` is called
-3. Controller retrieves the VI reference via `ITask.GetTaskReference()`
-4. VI is launched asynchronously
-5. Async call reference is stored internally
+1. `TaskController.new(task)` is called — the task is associated with the controller
+2. `TaskController.start()` is called
+3. Controller retrieves the VI reference via `ITask.getTaskReference()`
+4. Controller calls `isInitialized()` on the stop mechanism — if `False`, calls `init()`
+5. VI is launched asynchronously
+6. Async call reference is stored internally
 
 ### Stop
 
-1. `TaskController.Stop(timeout)` is called
-2. Controller calls `RequestStop()` on the stop mechanism
+1. `TaskController.stop(timeout)` is called
+2. Controller calls `requestStop()` on the stop mechanism
 3. Controller waits via `Wait on Asynchronous Call`
 4. `ITask out` is retrieved and cached internally
 
 ### Destroy
 
-1. `TaskController.Destroy(timeout)` is called
-2. If the task is still running, `Stop` is called internally
+1. `TaskController.destroy(timeout)` is called
+2. If the task is still running, `stop` is called internally
 3. The cached `ITask out` is returned to the caller
 
 ### Passive Completion
 
-If a task stops on its own, the `TaskController` detects it the next time `IsRunning()` or `Stop()` is called. The result is retrieved and cached at that point.
+If a task stops on its own, the `TaskController` detects it the next time `isRunning()` or `stop()` is called. The result is retrieved and cached at that point.
 
 
 ## Task VI Contract
@@ -241,13 +269,13 @@ No forced abort is used. Tasks must regularly check the stop condition and exit 
 
 The `TaskController` uses a **lazy synchronization model** (it does not actively monitor tasks).
 
-State is updated only when `IsRunning()` or `Stop()` is called. Internally, the controller tracks:
+State is updated only when `isRunning()` or `stop()` is called. Internally, the controller tracks:
 
 - Async call reference validity
 - Whether the result has been collected
 - Cached `ITask out`
 
-The async result is collected **only once** and then cached. `Stop()` is safe to call even after the task has already completed (it returns the cached result without error).
+The async result is collected **only once** and then cached. `stop()` is safe to call even after the task has already completed (it returns the cached result without error).
 This approach keeps the controller lightweight while ensuring consistency when interacting with completed tasks.
 
 
@@ -288,7 +316,7 @@ See [LICENSE](LICENSE) file for details.
 ## Author
 
 **Andrea Cadei**  
-Creator of *The LabVIEW Corner*
+Creator of [*The LabVIEW Corner*](https://thelabviewcorner.com  )
 
 GitHub: https://github.com/andcadev  
 Website: https://thelabviewcorner.com  
