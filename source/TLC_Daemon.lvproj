@@ -15,7 +15,9 @@
 			<Item Name="errors.txt" Type="Document" URL="../Errors/errors.txt"/>
 		</Item>
 		<Item Name="Examples" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="example_singleRun_stopNotifier.vi" Type="VI" URL="../Examples/example_singleRun_stopNotifier.vi"/>
+			<Item Name="example_multipleRun_stopNotifier.vi" Type="VI" URL="../Examples/example_multipleRun_stopNotifier.vi"/>
 			<Item Name="ExampleTask_StopNotifier.lvclass" Type="LVClass" URL="../Examples/ExampleTask_StopNotifier/ExampleTask_StopNotifier.lvclass"/>
 		</Item>
 		<Item Name="Templates" Type="Folder">
