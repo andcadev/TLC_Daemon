@@ -19,7 +19,8 @@
 			<Item Name="ITaskStopMechanism.lvclass" Type="LVClass" URL="../ITaskStopMechanism/ITaskStopMechanism.lvclass"/>
 		</Item>
 		<Item Name="StopMechanisms" Type="Folder">
-			<Item Name="NotifierStopMechanism.lvclass" Type="LVClass" URL="../NotifierStopMechanism/NotifierStopMechanism.lvclass"/>
+			<Item Name="BoolNotifierStopMechanism.lvclass" Type="LVClass" URL="../BoolNotifierStopMech/BoolNotifierStopMechanism.lvclass"/>
+			<Item Name="BoolUserEventStopMechanism.lvclass" Type="LVClass" URL="../BoolUserEventStopMech/BoolUserEventStopMechanism.lvclass"/>
 		</Item>
 		<Item Name="TaskController.lvclass" Type="LVClass" URL="../TaskController/TaskController.lvclass"/>
 	</Item>
