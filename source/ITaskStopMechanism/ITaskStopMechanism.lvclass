@@ -2,7 +2,7 @@
 <LVClass LVVersion="23008000">
 	<Property Name="NI.Lib.ContainingLib" Type="Str">TLC_Daemon.lvlib</Property>
 	<Property Name="NI.Lib.ContainingLibPath" Type="Str">../../TLC_Daemon.lvlib</Property>
-	<Property Name="NI.Lib.Description" Type="Str">Encapsulates how a task is requested to stop.</Property>
+	<Property Name="NI.Lib.Description" Type="Str">Defines the contract for the Stop Mechanism classes. A Stop Mechanism encapsulates how a task is requested to stop.</Property>
 	<Property Name="NI.Lib.HelpPath" Type="Str"></Property>
 	<Property Name="NI.Lib.Icon" Type="Bin">)Q#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)[!!!*Q(C=\&gt;5^DB."%-8R"S)A^1'1E+^16`!6@)7[AC/UB(/&amp;#IB8=MR'$LD!YQA_!L[!!`/@&gt;G':2=)A0I/&gt;=8HNV^0&gt;0`?U:K6RP*2?[(4LO0`O]70NGEM;&gt;8]O07I`@V?`,M&amp;V`_PW&lt;`J@.:\\0R\`3``T`$`H`Z8W'Y??DK@DXRZP&lt;W\30\ZHHWF_%&amp;'GCEIK.%^V-LH*47ZSEZO]S)O]S)O]S)M]S:-]S:-]S:-]S)-]S)-]S).]H/1C&amp;\H)):H*T52G5$/!O2C+T*PR')`R'!^@:4T'9TT'9TR=)O-R(O-R(O/BGYT(?)T(?)S(I9&lt;%YS4(9TQ-L]*4?!J0Y3E]4+H#5Q#+S9K"CU&amp;AK'AM0B3?QF.Y_+D#5XA+4_%J0$3L]"3?QF.Y#A^&gt;RKL5U-QH/2['5?**0)EH]31?BF&lt;C34S**`%E(K:4YEE]#3+:-"E=AJ*/S18*F]34?0CDR*.Y%E`C34QUD4O59W6GT8S3YQE]A3@Q"*\!QR!+0)%H]!3?Q-/Q#DS"*`!%HM$$6!I]A3@Q"*"A5K:8-&amp;D1-&lt;AI#!)0L\&amp;&lt;9NSF'J)9J^3&lt;6\UJV:N.P9H5GU.^U^5X5XW4V)OP8F4V9KE81@XDV'AV2DW*OP.]I1[]\[E&gt;N;5G;E/NK27VJ":TV^^]Y?&amp;QU([`VW[XUX;\V42.WGQW7K`87KV77C[87CQ7F]@!;]\,!_(LZ^*R]NXRT=/(Y\PX&gt;]&gt;0$[@DKY^`YX`J@`"MV(.&gt;D]M;@1:=D?R.!!!!!!</Property>
 	<Property Name="NI.Lib.SourceVersion" Type="Int">587235328</Property>

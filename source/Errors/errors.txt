@@ -11,4 +11,7 @@ Not allowed operation (Invalid task status)
 <nierror code="6002">
 Task termination timeout
 </nierror>
+<nierror code="6003">
+Invalid reference
+</nierror>
 </nidocument>

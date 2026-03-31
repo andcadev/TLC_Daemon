@@ -17,10 +17,12 @@
 		<Item Name="Examples" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="example_boolUserEventStopMechanism.vi" Type="VI" URL="../Examples/example_boolUserEventStopMechanism.vi"/>
+			<Item Name="example_msgUserEventStopMechanism.vi" Type="VI" URL="../Examples/example_msgUserEventStopMechanism.vi"/>
 			<Item Name="example_multipleRun_stopNotifier.vi" Type="VI" URL="../Examples/example_multipleRun_stopNotifier.vi"/>
 			<Item Name="example_singleRun_stopNotifier.vi" Type="VI" URL="../Examples/example_singleRun_stopNotifier.vi"/>
 			<Item Name="ExampleTask_BoolStopNotifier.lvclass" Type="LVClass" URL="../Examples/ExampleTask_StopNotifier/ExampleTask_BoolStopNotifier.lvclass"/>
 			<Item Name="ExampleTask_BoolUserEventStopNotifier.lvclass" Type="LVClass" URL="../Examples/ExampleTask_BoolUserEventStopNotifier/ExampleTask_BoolUserEventStopNotifier.lvclass"/>
+			<Item Name="ExampleTask_MsgUserEventStopNotifier.lvclass" Type="LVClass" URL="../Examples/ExampleTask_MsgUserEventStopNotifier/ExampleTask_MsgUserEventStopNotifier.lvclass"/>
 		</Item>
 		<Item Name="Templates" Type="Folder">
 			<Item Name="taskPrototype.vi" Type="VI" URL="../Templates/taskPrototype.vi"/>
@@ -43,8 +45,13 @@
 				<Item Name="LUnit Advanced Assertions.lvlib" Type="Library" URL="/&lt;vilib&gt;/Astemes/LUnit/Palette/Advanced Assertions/LUnit Advanced Assertions.lvlib"/>
 				<Item Name="LUnit Runnable.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Astemes/LUnit/LUnit Runnable.lvclass"/>
 				<Item Name="NI_Data Type.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/Data Type/NI_Data Type.lvlib"/>
+				<Item Name="Random Number (Range) DBL.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) DBL.vi"/>
+				<Item Name="Random Number (Range) I64.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) I64.vi"/>
+				<Item Name="Random Number (Range) U64.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) U64.vi"/>
+				<Item Name="Random Number (Range).vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range).vi"/>
 				<Item Name="Search Unsorted 1D Array Core.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Helpers/Search Unsorted 1D Array Core.vim"/>
 				<Item Name="Search Unsorted 1D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Search Unsorted 1D Array.vim"/>
+				<Item Name="sub_Random U32.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/sub_Random U32.vi"/>
 				<Item Name="Test Case.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Astemes/LUnit/Test Case.lvclass"/>
 				<Item Name="Test Suite.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Astemes/LUnit/Test Suite.lvclass"/>
 			</Item>
