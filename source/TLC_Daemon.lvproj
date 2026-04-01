@@ -21,8 +21,8 @@
 			<Item Name="example_multipleRun_stopNotifier.vi" Type="VI" URL="../Examples/example_multipleRun_stopNotifier.vi"/>
 			<Item Name="example_singleRun_stopNotifier.vi" Type="VI" URL="../Examples/example_singleRun_stopNotifier.vi"/>
 			<Item Name="ExampleTask_BoolStopNotifier.lvclass" Type="LVClass" URL="../Examples/ExampleTask_StopNotifier/ExampleTask_BoolStopNotifier.lvclass"/>
-			<Item Name="ExampleTask_BoolUserEventStopNotifier.lvclass" Type="LVClass" URL="../Examples/ExampleTask_BoolUserEventStopNotifier/ExampleTask_BoolUserEventStopNotifier.lvclass"/>
-			<Item Name="ExampleTask_MsgUserEventStopNotifier.lvclass" Type="LVClass" URL="../Examples/ExampleTask_MsgUserEventStopNotifier/ExampleTask_MsgUserEventStopNotifier.lvclass"/>
+			<Item Name="ExampleTask_BoolUserEventStop.lvclass" Type="LVClass" URL="../Examples/ExampleTask_BoolUserEventStop/ExampleTask_BoolUserEventStop.lvclass"/>
+			<Item Name="ExampleTask_MsgUserEventStop.lvclass" Type="LVClass" URL="../Examples/ExampleTask_MsgUserEventStop/ExampleTask_MsgUserEventStop.lvclass"/>
 		</Item>
 		<Item Name="Templates" Type="Folder">
 			<Item Name="taskPrototype.vi" Type="VI" URL="../Templates/taskPrototype.vi"/>
