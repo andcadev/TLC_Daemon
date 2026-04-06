@@ -16,32 +16,46 @@
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
+			<Item Name="Example_Bool_Notifier_StopMech" Type="Folder">
+				<Item Name="Task_BoolStopNotifier" Type="Folder">
+					<Item Name="Task_BoolStopNotifier.lvclass" Type="LVClass" URL="../Examples/Example_Bool_Notifier_StopMech/Task_BoolStopNotifier/Task_BoolStopNotifier.lvclass"/>
+				</Item>
+				<Item Name="Example_Bool_Stop_Mechanism.lvproj" Type="Document" URL="../Examples/Example_Bool_Notifier_StopMech/Example_Bool_Stop_Mechanism.lvproj"/>
+				<Item Name="example_multipleRun_stopNotifier.vi" Type="VI" URL="../Examples/Example_Bool_Notifier_StopMech/example_multipleRun_stopNotifier.vi"/>
+				<Item Name="example_singleRun_stopNotifier.vi" Type="VI" URL="../Examples/Example_Bool_Notifier_StopMech/example_singleRun_stopNotifier.vi"/>
+			</Item>
+			<Item Name="Example_Bool_User_Event_StopMech" Type="Folder">
+				<Item Name="Task_BoolUserEventStopMech" Type="Folder">
+					<Item Name="Task_BoolUserEventStopMech.lvclass" Type="LVClass" URL="../Examples/Example_Bool_User_Event_StopMech/Task_BoolUserEventStopMech/Task_BoolUserEventStopMech.lvclass"/>
+				</Item>
+				<Item Name="Example_Bool_User_Event_Stop_Mechanism.lvproj" Type="Document" URL="../Examples/Example_Bool_User_Event_StopMech/Example_Bool_User_Event_Stop_Mechanism.lvproj"/>
+				<Item Name="example_boolUserEventStopMechanism.vi" Type="VI" URL="../Examples/Example_Bool_User_Event_StopMech/example_boolUserEventStopMechanism.vi"/>
+			</Item>
+			<Item Name="Example_Msg_User_Event_StopMech" Type="Folder">
+				<Item Name="Task_MsgUserEventStopMech" Type="Folder">
+					<Item Name="Task_MsgUserEventStopMech.lvclass" Type="LVClass" URL="../Examples/Example_Msg_User_Event_StopMech/Task_MsgUserEventStopMech/Task_MsgUserEventStopMech.lvclass"/>
+				</Item>
+				<Item Name="Example_Message_UserEvent_Stop_Mechanism.lvproj" Type="Document" URL="../Examples/Example_Msg_User_Event_StopMech/Example_Message_UserEvent_Stop_Mechanism.lvproj"/>
+				<Item Name="example_msgUserEventStopMechanism.vi" Type="VI" URL="../Examples/Example_Msg_User_Event_StopMech/example_msgUserEventStopMechanism.vi"/>
+			</Item>
 		</Item>
 		<Item Name="Templates" Type="Folder">
 			<Item Name="taskPrototype.vi" Type="VI" URL="../Templates/taskPrototype.vi"/>
 		</Item>
 		<Item Name="Tests" Type="Folder">
-			<Item Name="TaskControllerTests.lvclass" Type="LVClass" URL="../../tests/TaskControllerTests/TaskControllerTests.lvclass"/>
-			<Item Name="TaskMock.lvclass" Type="LVClass" URL="../../tests/TaskMock/TaskMock.lvclass"/>
+			<Item Name="readme.txt" Type="Document" URL="../../tests/readme.txt"/>
+			<Item Name="TLC_Daemon_Tests.lvproj" Type="Document" URL="../../tests/TLC_Daemon_Tests.lvproj"/>
 		</Item>
 		<Item Name="TLC_Daemon.lvlib" Type="Library" URL="../TLC_Daemon.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
-				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
-				<Item Name="Equal Comparable.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Comparison/Equal/Equal Comparable/Equal Comparable.lvclass"/>
-				<Item Name="Equal Functor.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Comparison/Equal/Equal Functor/Equal Functor.lvclass"/>
-				<Item Name="Equals.vim" Type="VI" URL="/&lt;vilib&gt;/Comparison/Equals.vim"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
-				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
-				<Item Name="Get LV Class Path.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Path.vi"/>
-				<Item Name="LUnit Advanced Assertions.lvlib" Type="Library" URL="/&lt;vilib&gt;/Astemes/LUnit/Palette/Advanced Assertions/LUnit Advanced Assertions.lvlib"/>
-				<Item Name="LUnit Runnable.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Astemes/LUnit/LUnit Runnable.lvclass"/>
-				<Item Name="NI_Data Type.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/Data Type/NI_Data Type.lvlib"/>
-				<Item Name="Search Unsorted 1D Array Core.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Helpers/Search Unsorted 1D Array Core.vim"/>
-				<Item Name="Search Unsorted 1D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Search Unsorted 1D Array.vim"/>
-				<Item Name="Test Case.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Astemes/LUnit/Test Case.lvclass"/>
-				<Item Name="Test Suite.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Astemes/LUnit/Test Suite.lvclass"/>
+				<Item Name="Random Number (Range) DBL.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) DBL.vi"/>
+				<Item Name="Random Number (Range) I64.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) I64.vi"/>
+				<Item Name="Random Number (Range) U64.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range) U64.vi"/>
+				<Item Name="Random Number (Range).vi" Type="VI" URL="/&lt;vilib&gt;/numeric/Random Number (Range).vi"/>
+				<Item Name="sub_Random U32.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/sub_Random U32.vi"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
