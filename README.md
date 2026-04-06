@@ -140,12 +140,12 @@ Central component responsible for managing the task lifecycle.
 
 ## Execution Flow
 
-### New + Start
+### New + Launch
 
-1. `TaskController.new(task)` is called — the task is associated with the controller
+1. `TaskController.new(task)` is called (the task is associated with the controller)
 2. `TaskController.launch()` is called
 3. Controller retrieves the VI reference via `ITask.getTaskReference()`
-4. Controller calls `isInitialized()` on the stop mechanism — if `False`, calls `init()`
+4. Controller calls `isInitialized()` on the stop mechanism. If `False`, calls `init()`
 5. VI is launched asynchronously
 6. Async call reference is stored internally
 
@@ -179,6 +179,15 @@ Every task must follow a standard connector pane:
 | `error out` | Output |
 
 LabVIEW enforces connector pane compatibility natively when the VI is launched asynchronously. No additional validation is needed.
+
+
+## Asynchronous Dynamic Dispatch Pattern
+
+LabVIEW does not support dynamic dispatch directly when launching a VI asynchronously. When working with class hierarchies, the typical workarounds are building the VI path programmatically at runtime, setting connector pane inputs manually, or wrapping the polymorphic call inside a statically-referenced VI that handles dispatch internally. All of these approaches add complexity and boilerplate.
+
+TLC_Daemon establishes a consistent pattern that eliminates these workarounds. `getTaskReference()` acts as the dispatch mechanism: the `TaskController` calls it on whatever `ITask` object it receives, and gets back the correct VI reference automatically. Polymorphism is used *before* the asynchronous launch, to select the VI, rather than during it. No wrappers, no dynamic path construction. If two concrete tasks are available and the caller passes the right one to the `TaskController`, the correct VI is launched without any additional logic.
+
+The second part of the pattern concerns data passing. In LabVIEW, passing data to and retrieving results from an asynchronously launched VI requires knowing its connector pane in advance. TLC_Daemon solves this by imposing a standard connector pane on all task VIs (`ITask in`, `error in` → `ITask out`, `error out`), which the `TaskController` relies on to pass data consistently across all implementations. LabVIEW enforces this contract natively at launch time. Inside the task VI, the cast from `ITask` to the concrete class gives the task access to its own private data, keeping the controller generic and the task self-contained.
 
 
 ## Implementing a Task
@@ -216,9 +225,9 @@ Logic:
 Class: DataLoggingTask implements ITask
 
 Private Data:
-  - file path      : Path
+  - file path           : Path
   - user event ref      : User Event Refnum
-  - stop notifier  : Notifier Ref
+  - stop notifier       : Notifier Ref
 
 getTaskReference()  → DataLoggingTask.vi
 getStopMechanism()  → BoolNotifierStopMechanism
@@ -245,8 +254,8 @@ Stop is always **cooperative (soft stop)**. The controller triggers the stop; th
 Supported patterns:
 
 - Boolean notifier
-- Message User event (e.g. "Stop" command)
-- Boolean user Events
+- Message user event (e.g. "Stop" command)
+- Boolean user events
 
 No forced abort is used. Tasks must regularly check the stop condition and exit cleanly.
 
@@ -302,7 +311,7 @@ See [LICENSE](LICENSE) file for details.
 ## Author
 
 **Andrea Cadei**  
-Creator of [*The LabVIEW Corner*](https://thelabviewcorner.com  )
+Creator of [*The LabVIEW Corner*](https://thelabviewcorner.com)
 
 GitHub: https://github.com/andcadev  
 Website: https://thelabviewcorner.com  
