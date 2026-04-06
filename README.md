@@ -57,7 +57,7 @@ classDiagram
         -taskRef : VIRefnum
         -cachedResult : ITask
         +new(task : ITask) TaskController
-        +start() void
+        +launch() void
         +stop(timeout : int) void
         +isRunning() bool
         +destroy(timeout : int, requestStopMechDestroy : bool) ITask
@@ -68,34 +68,22 @@ classDiagram
         +getTaskReference() VIRefnum
         +getStopMechanism() ITaskStopMechanism
     }
-    class NotifierStopMechanism {
-        -notifierRef : NotifierRef
-        +init() void
-        +isInitialized() bool
-        +requestStop() void
+    class BoolNotifierStopMechanism {
+        -notifierRef : NotifierRefnum
         +getNotifierRef() NotifierRef
-        +destroy() void
     }
-    class QueueStopMechanism {
-        -queueRef : QueueRef
-        +init() void
-        +isInitialized() bool
-        +requestStop() void
-        +getQueueRef() QueueRef
-        +destroy() void
+    class BoolUserEventStopMechanism {
+        -userEventRef : UserEventRefnum
+        +getUserEventRef() UserEventRefnum
     }
-    class UserEventStopMechanism {
-        -userEvent : UserEvent
-        +init() void
-        +isInitialized() bool
-        +requestStop() void
-        +getUserEvent() UserEvent
-        +destroy() void
+    class MsgUserEventStopMechanism {
+        -userEvent : UserEventRefnum
+        +getUserEventRef() UserEventRefnum
     }
     ITask <|.. ConcreteTask : implements
-    ITaskStopMechanism <|.. NotifierStopMechanism : implements
-    ITaskStopMechanism <|.. QueueStopMechanism : implements
-    ITaskStopMechanism <|.. UserEventStopMechanism : implements
+    ITaskStopMechanism <|.. BoolNotifierStopMechanism : implements
+    ITaskStopMechanism <|.. BoolUserEventStopMechanism : implements
+    ITaskStopMechanism <|.. MsgUserEventStopMechanism : implements
     TaskController ..> ITask : uses
     TaskController ..> ITaskStopMechanism : uses
 ```
@@ -115,10 +103,10 @@ Encapsulates how a task is requested to stop.
 
 | Method | Description |
 |---|---|
-| `init()` | Initializes the stop mechanism (e.g. creates the notifier, queue, or user event) |
+| `init()` | Initializes the stop mechanism (e.g. creates the notifier, or user event) |
 | `isInitialized()` | Returns `True` if the mechanism is already initialized, `False` otherwise |
 | `requestStop()` | Signals the task to stop |
-| `destroy()` | Destroys the underlying primitive (e.g. releases the notifier or queue) |
+| `destroy()` | Destroys the underlying primitive (e.g. releases the notifier or user event) |
 
 The `TaskController` does not need to know *how* the stop works, only that it can trigger it.
 
@@ -126,16 +114,14 @@ The `TaskController` does not need to know *how* the stop works, only that it ca
 
 `ITaskStopMechanism` supports two initialization modes:
 
-- **Internal initialization**: the `TaskController` calls `init()` automatically during `start()` if `isInitialized()` returns `False`. The controller also owns the lifecycle of the mechanism and calls `destroy()` when appropriate.
-- **External initialization**: the mechanism is initialized before being passed to the task. `isInitialized()` returns `True`, so the `TaskController` skips `init()`. This is useful when the mechanism needs to be shared with other components — for example, a message queue used both to stop the task and to communicate with it from outside.
+- **Internal initialization**: the `TaskController` calls `init()` automatically during `launch()` if `isInitialized()` returns `False`. The controller also owns the lifecycle of the mechanism and calls `destroy()` when appropriate.
+- **External initialization**: the mechanism is initialized before being passed to the task. `isInitialized()` returns `True`, so the `TaskController` skips `init()`. This is useful when the mechanism needs to be shared with other components — for example, a message user event used both to stop the task and to communicate with it from outside.
 
 > **Note:** Use external initialization carefully. The `TaskController` will call `requestStop()` on the mechanism, which may affect any external code sharing the same primitive.
 
-If any initialization parameters are needed (e.g. queue size), they must be set on the concrete class before passing it to the task — `init()` takes no arguments and relies entirely on the object's internal state.
-
 #### Built-in implementations
 
-TLC_Daemon ships with three ready-to-use stop mechanism implementations covering the most common LabVIEW patterns: `NotifierStopMechanism` for boolean notifier-based stop, `UserEventStopMechanism` for event-driven stop, and `QueueStopMechanism` for message-based stop. Custom mechanisms can be added by implementing `ITaskStopMechanism`.
+TLC_Daemon ships with three ready-to-use stop mechanism implementations covering the most common LabVIEW patterns: `BoolNotifierStopMechanism` for boolean notifier-based stop, `MsgUserEventStopMechanism` for event-driven stop, and `BoolUserEventStopMechanism` for message-based stop. Custom mechanisms can be added by implementing `ITaskStopMechanism`.
 
 `ITaskStopMechanism` intentionally exposes only `requestStop()` and not a dual `checkStop()` method. Reading the stop signal is always done directly by the task VI, which, after casting to the concrete type, has direct access to the underlying primitive. This avoids unnecessary dynamic dispatch overhead in the task loop and, more importantly, makes the pattern compatible with LabVIEW Event Structures: a user event must be handled inside an Event Structure in the task VI itself, and cannot be encapsulated behind a method call.
 
@@ -146,7 +132,7 @@ Central component responsible for managing the task lifecycle.
 | Method | Description |
 |---|---|
 | `new(task)` | Creates a new controller and associates the task |
-| `start()` | Launches the task asynchronously. Single use |
+| `launch()` | Launches the task asynchronously. Single use |
 | `stop(timeout)` | Requests stop and waits for completion |
 | `isRunning()` | Checks actual execution state; collects result if already finished |
 | `destroy(timeout)` | Calls `stop` if the task is still running, then returns `ITask out` |
@@ -157,7 +143,7 @@ Central component responsible for managing the task lifecycle.
 ### New + Start
 
 1. `TaskController.new(task)` is called — the task is associated with the controller
-2. `TaskController.start()` is called
+2. `TaskController.launch()` is called
 3. Controller retrieves the VI reference via `ITask.getTaskReference()`
 4. Controller calls `isInitialized()` on the stop mechanism — if `False`, calls `init()`
 5. VI is launched asynchronously
@@ -231,11 +217,11 @@ Class: DataLoggingTask implements ITask
 
 Private Data:
   - file path      : Path
-  - queue ref      : Queue Ref
+  - user event ref      : User Event Refnum
   - stop notifier  : Notifier Ref
 
 getTaskReference()  → DataLoggingTask.vi
-getStopMechanism()  → NotifierStopMechanism
+getStopMechanism()  → BoolNotifierStopMechanism
 ```
 
 ### `DataLoggingTask.vi` behavior
@@ -259,8 +245,8 @@ Stop is always **cooperative (soft stop)**. The controller triggers the stop; th
 Supported patterns:
 
 - Boolean notifier
-- Message queue (e.g. "Stop" command)
-- User Events
+- Message User event (e.g. "Stop" command)
+- Boolean user Events
 
 No forced abort is used. Tasks must regularly check the stop condition and exit cleanly.
 
