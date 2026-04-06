@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-04-04 21:39:50" Creator="andre" Comments="" ID="8a3608c31de37aae4f3b614405bbd652">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-04-06 20:55:16" Creator="andre" Comments="" ID="a98a6061d353463effecd404e30f7ed4">
   <Library_General_Settings>
     <Package_File_Name>TLC_Daemon</Package_File_Name>
     <Library_Version>1.0.0.2</Library_Version>
@@ -120,6 +120,24 @@ https://github.com/andcadev/TLC_Daemon</Description>
       <Destination_Overrides>
         <Path>.</Path>
         <Destination>0</Destination>
+        <Additional_Destination>false</Additional_Destination>
+        <Additional_Destination_Index>0</Additional_Destination_Index>
+      </Destination_Overrides>
+      <Destination_Overrides>
+        <Path>Examples</Path>
+        <Destination>1</Destination>
+        <Additional_Destination>false</Additional_Destination>
+        <Additional_Destination_Index>0</Additional_Destination_Index>
+      </Destination_Overrides>
+      <Destination_Overrides>
+        <Path>bin3/tlc_daemon.bin3</Path>
+        <Destination>0</Destination>
+        <Additional_Destination>true</Additional_Destination>
+        <Additional_Destination_Index>0</Additional_Destination_Index>
+      </Destination_Overrides>
+      <Destination_Overrides>
+        <Path>Errors/tlc_daemon_errors.txt</Path>
+        <Destination>3</Destination>
         <Additional_Destination>false</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
       </Destination_Overrides>
@@ -344,7 +362,7 @@ _____________________________________
         <Path>..\source\Templates</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>524A2752448B4BFA4CF9D146C7A0B2F3</GUID>
+      <GUID>658529D4D72C0F430ED4CDC71E8415F8</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -435,7 +453,7 @@ _____________________________________
         <Path>..\source\BoolUserEventStopMech\requestStop.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>B575404EBE34EEAA9B7A3AFA783011CF</GUID>
+      <GUID>CF5EAA6FAD843182FFB45AD67366A4AA</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -509,7 +527,7 @@ _____________________________________
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\example_boolUserEventStopMechanism.vi</Path>
+        <Path>..\source\Examples\Example_Bool_User_Event_StopMech\example_boolUserEventStopMechanism.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -523,7 +541,7 @@ _____________________________________
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\example_msgUserEventStopMechanism.vi</Path>
+        <Path>..\source\Examples\Example_Msg_User_Event_StopMech\example_msgUserEventStopMechanism.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -537,7 +555,7 @@ _____________________________________
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\example_multipleRun_stopNotifier.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\example_multipleRun_stopNotifier.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -551,10 +569,10 @@ _____________________________________
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\example_singleRun_stopNotifier.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\example_singleRun_stopNotifier.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>26F884DE04DDE8BC6B204BB6A0237E52</GUID>
+      <GUID>68758734A8EA7DA9FEB490D4D6527406</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -603,7 +621,7 @@ _____________________________________
         <Path>..\source\ITask\getTaskReference.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>26EBC60C3E3F4011704D2481FBD2211C</GUID>
+      <GUID>3F721977876C4615019BF848BA4F7433</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -680,7 +698,7 @@ _____________________________________
         <Path>..\source\ITaskStopMechanism\requestStop.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>EF84107D81CA85EDA4130FD45CE99A6C</GUID>
+      <GUID>8E0766563A45FD2C5571397066A7F034</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -785,7 +803,7 @@ _____________________________________
         <Path>..\source\MsgUserEventStopMech\requestStop.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>E11F19270FE5B35BFE92D9DB97640FD4</GUID>
+      <GUID>420461580315044364161DA3B63FD0EB</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -876,7 +894,7 @@ _____________________________________
         <Path>..\source\NotifierStopMechanism\requestStop.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>5DE033B304EC0EAE74C6E3298108D0D3</GUID>
+      <GUID>5969B4C30749699657C7D1BAC8DCF31D</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -995,7 +1013,7 @@ _____________________________________
         <Path>..\source\TaskController\waitForTermination.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>DC75AB58B083CFD028B850307942AD55</GUID>
+      <GUID>EB66F7A70EF6A887322B57E2CF5553C5</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>0</Parent_Palette_Index>
@@ -1030,7 +1048,7 @@ _____________________________________
         <Path>..\source\Templates\taskPrototype.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>7F5640F978129FF1052D17AEB7E1328B</GUID>
+      <GUID>97D480A2B1D3D8BEA44E74CF7D327EC1</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>2</Parent_Palette_Index>
@@ -1062,7 +1080,7 @@ _____________________________________
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_BoolUserEventStop\getStopMechanism.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\getStopMechanism.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1076,7 +1094,7 @@ _____________________________________
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_BoolUserEventStop\getTaskReference.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\getTaskReference.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1090,7 +1108,7 @@ _____________________________________
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_BoolUserEventStop\myTask.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\myTask.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1104,7 +1122,7 @@ _____________________________________
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_BoolUserEventStop\new.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\new.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1118,10 +1136,10 @@ _____________________________________
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_BoolUserEventStop\Read description.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\Read description.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F8067F79C1FB1BCA5DF7545D767F195B</GUID>
+      <GUID>03F13A0DCFB63C161D843CEBEB547B98</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>2</Parent_Palette_Index>
@@ -1153,7 +1171,7 @@ _____________________________________
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_MsgUserEventStop\getStopMechanism.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\getStopMechanism.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1167,7 +1185,7 @@ _____________________________________
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_MsgUserEventStop\getTaskReference.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\getTaskReference.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1181,7 +1199,7 @@ _____________________________________
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_MsgUserEventStop\myTask.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\myTask.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1195,7 +1213,7 @@ _____________________________________
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_MsgUserEventStop\new.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\new.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1209,10 +1227,10 @@ _____________________________________
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_MsgUserEventStop\Read description.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\Read description.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>F4834566A7F93EA6497323B8BAD9F55B</GUID>
+      <GUID>CDE3BBB50C6A5F69EA749B420DDAB7A9</GUID>
     </Functions_Palette_Data>
     <Functions_Palette_Data>
       <Parent_Palette_Index>2</Parent_Palette_Index>
@@ -1244,7 +1262,7 @@ _____________________________________
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_StopNotifier\destroy.vi</Path>
+        <Path>..\source\BoolUserEventStopMech\destroy.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1258,7 +1276,7 @@ _____________________________________
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_StopNotifier\getStopMechanism.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\getStopMechanism.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1272,7 +1290,7 @@ _____________________________________
           <Column>3</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_StopNotifier\getTaskReference.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\getTaskReference.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1286,7 +1304,7 @@ _____________________________________
           <Column>4</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_StopNotifier\myTask.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\myTask.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1300,7 +1318,7 @@ _____________________________________
           <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_StopNotifier\new.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\new.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1314,7 +1332,7 @@ _____________________________________
           <Column>6</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_StopNotifier\Read description.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\Read description.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1328,7 +1346,7 @@ _____________________________________
           <Column>1</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_StopNotifier\Read loopCounter.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\Read loopCounter.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -1342,10 +1360,10 @@ _____________________________________
           <Column>2</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Examples\ExampleTask_StopNotifier\Write loopCounter.vi</Path>
+        <Path>..\source\Examples\Example_Bool_Notifier_StopMech\Task_BoolStopNotifier\Write loopCounter.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>BD47A5497656D296EF58AB0D5D65ABEF</GUID>
+      <GUID>6B9B2D31EED15B67CF8D3B65F983614E</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
