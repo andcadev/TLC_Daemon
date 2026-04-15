@@ -41,7 +41,7 @@
 				<Item Name="Task_MsgUserEventStopMech.lvclass" Type="LVClass" URL="../Examples/Example_Msg_User_Event_StopMech/Task_MsgUserEventStopMech/Task_MsgUserEventStopMech.lvclass"/>
 			</Item>
 		</Item>
-		<Item Name="Provider" Type="Folder">
+		<Item Name="Providers" Type="Folder">
 			<Item Name="Support" Type="Folder">
 				<Item Name="buildITaskMethodPath.vi" Type="VI" URL="../Provider/Support/buildITaskMethodPath.vi">
 					<Property Name="marked" Type="Int">0</Property>
@@ -56,11 +56,9 @@
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 			</Item>
-			<Item Name="Templates" Type="Folder">
-				<Item Name="ITask.getTaskReference.vi" Type="VI" URL="../Provider/Templates/ITask.getTaskReference.vi">
-					<Property Name="marked" Type="Int">0</Property>
-				</Item>
-			</Item>
+		</Item>
+		<Item Name="Resources" Type="Folder">
+			<Item Name="ITaskClassTemplate.lvclass" Type="LVClass" URL="../Resource/ITaskClassTemplate/ITaskClassTemplate.lvclass"/>
 		</Item>
 		<Item Name="Templates" Type="Folder">
 			<Item Name="booleanNotifierStopMechanism.vi" Type="VI" URL="../Templates/booleanNotifierStopMechanism.vi">

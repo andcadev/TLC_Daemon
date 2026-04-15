@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-04-10 21:32:26" Creator="andre" Comments="" ID="c0b64a5149242d176d326d79894c18b7">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-04-15 21:15:36" Creator="andre" Comments="" ID="19fb74c50a788e369e1a694b4a861a70">
   <Library_General_Settings>
     <Package_File_Name>TLC_Daemon</Package_File_Name>
-    <Library_Version>1.0.0.7</Library_Version>
+    <Library_Version>1.0.0.9</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\source</Library_Source_Folder>
     <Library_Output_Folder>..\distributions</Library_Output_Folder>
@@ -115,6 +115,12 @@ https://github.com/andcadev/TLC_Daemon</Description>
         <Preserve_Hierarchy>true</Preserve_Hierarchy>
         <Path>&lt;application&gt;\examples\exbins</Path>
       </Additional_Destination>
+      <Additional_Destination>
+        <Name>CustomResources</Name>
+        <LLB>false</LLB>
+        <Preserve_Hierarchy>true</Preserve_Hierarchy>
+        <Path>&lt;resource&gt;\TLC\Daemon</Path>
+      </Additional_Destination>
     </Destinations>
     <Source_Files>
       <Destination_Overrides>
@@ -152,6 +158,12 @@ https://github.com/andcadev/TLC_Daemon</Description>
         <Destination>1</Destination>
         <Additional_Destination>false</Additional_Destination>
         <Additional_Destination_Index>0</Additional_Destination_Index>
+      </Destination_Overrides>
+      <Destination_Overrides>
+        <Path>Resource</Path>
+        <Destination>0</Destination>
+        <Additional_Destination>true</Additional_Destination>
+        <Additional_Destination_Index>1</Additional_Destination_Index>
       </Destination_Overrides>
       <Password_Overrides>
         <Path>.</Path>
@@ -197,6 +209,9 @@ https://github.com/andcadev/TLC_Daemon</Description>
       </Place_Folder_Contents>
       <Place_Folder_Contents>
         <Path>Bin3</Path>
+      </Place_Folder_Contents>
+      <Place_Folder_Contents>
+        <Path>Resource</Path>
       </Place_Folder_Contents>
     </Source_Files>
     <License_Agreement_Filepath>..\LICENSE</License_Agreement_Filepath>
@@ -358,7 +373,7 @@ _____________________________________
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>taskPrototype.vi</NameSub_Menu_Name>
+        <NameSub_Menu_Name>TLC_Daemon - Task Example</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>true</is_Merge_VI>
         <Position>
@@ -372,29 +387,15 @@ _____________________________________
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>TLC_Daemon - Message user event stop mechanism</NameSub_Menu_Name>
+        <NameSub_Menu_Name>TLC_Daemon - Boolean notifier stop mechanism</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>true</is_Merge_VI>
         <Position>
           <Row>2</Row>
-          <Column>4</Column>
+          <Column>7</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Templates\messageUserEventStopMechanism.vi</Path>
-        <VI_Title/>
-      </Items_Data>
-      <Items_Data>
-        <Type>Item</Type>
-        <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>Task Controller Usage</NameSub_Menu_Name>
-        <Short_Name/>
-        <is_Merge_VI>true</is_Merge_VI>
-        <Position>
-          <Row>2</Row>
-          <Column>5</Column>
-        </Position>
-        <Icon>00000000</Icon>
-        <Path>..\source\Templates\taskControllerUsage.vi</Path>
+        <Path>..\source\Templates\booleanNotifierStopMechanism.vi</Path>
         <VI_Title/>
       </Items_Data>
       <Items_Data>
@@ -414,18 +415,18 @@ _____________________________________
       <Items_Data>
         <Type>Item</Type>
         <Sub_Palette_Index>-1</Sub_Palette_Index>
-        <NameSub_Menu_Name>TLC_Daemon - Boolean notifier stop mechanism</NameSub_Menu_Name>
+        <NameSub_Menu_Name>TLC_Daemon - Message user event stop mechanism</NameSub_Menu_Name>
         <Short_Name/>
         <is_Merge_VI>true</is_Merge_VI>
         <Position>
           <Row>2</Row>
-          <Column>7</Column>
+          <Column>5</Column>
         </Position>
         <Icon>00000000</Icon>
-        <Path>..\source\Templates\booleanNotifierStopMechanism.vi</Path>
+        <Path>..\source\Templates\messageUserEventStopMechanism.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9E51C02BF3BB9017DBB00B3D6217350B</GUID>
+      <GUID>D8C9C21686DE6765BE0FD68706373C58</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
