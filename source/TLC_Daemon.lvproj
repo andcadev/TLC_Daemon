@@ -57,9 +57,6 @@
 				</Item>
 			</Item>
 		</Item>
-		<Item Name="Resources" Type="Folder">
-			<Item Name="ITaskClassTemplate.lvclass" Type="LVClass" URL="../Resource/ITaskClassTemplate/ITaskClassTemplate.lvclass"/>
-		</Item>
 		<Item Name="Templates" Type="Folder">
 			<Item Name="booleanNotifierStopMechanism.vi" Type="VI" URL="../Templates/booleanNotifierStopMechanism.vi">
 				<Property Name="marked" Type="Int">0</Property>
