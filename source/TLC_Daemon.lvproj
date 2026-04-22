@@ -70,9 +70,14 @@
 				<Item Name="newITaskClass.vi" Type="VI" URL="../Provider/Support/newITaskClass.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="replaceObjectPlaceHolders_const.vi" Type="VI" URL="../Provider/Support/replaceObjectPlaceHolders_const.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 			</Item>
 		</Item>
-		<Item Name="Resource" Type="Folder"/>
+		<Item Name="Resource" Type="Folder">
+			<Item Name="ITaskClassTemplate.lvclass" Type="LVClass" URL="../Resource/ITaskClassTemplate/ITaskClassTemplate.lvclass"/>
+		</Item>
 		<Item Name="Templates" Type="Folder">
 			<Item Name="booleanNotifierStopMechanism.vi" Type="VI" URL="../Templates/booleanNotifierStopMechanism.vi">
 				<Property Name="marked" Type="Int">0</Property>
@@ -241,9 +246,16 @@
 				<Item Name="sub_Random U32.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/sub_Random U32.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="TRef Traverse.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef Traverse.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="TRef TravTarget.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef TravTarget.ctl">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="Unflatten Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pixmap.llb/Unflatten Pixmap.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="VI Scripting - Traverse.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/traverseref.llb/VI Scripting - Traverse.lvlib"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
