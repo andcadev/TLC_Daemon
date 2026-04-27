@@ -49,6 +49,9 @@
 				<Item Name="buildClassIcon.vi" Type="VI" URL="../Provider/Support/buildClassIcon.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="buildClassMethodName.vi" Type="VI" URL="../Provider/Support/buildClassMethodName.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="buildITaskMethodPath.vi" Type="VI" URL="../Provider/Support/buildITaskMethodPath.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -70,7 +73,13 @@
 				<Item Name="newITaskClass.vi" Type="VI" URL="../Provider/Support/newITaskClass.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="processGetStopMech.vi" Type="VI" URL="../Provider/Support/processGetStopMech.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="replaceObjectPlaceHolders_const.vi" Type="VI" URL="../Provider/Support/replaceObjectPlaceHolders_const.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="stopMechanismType.ctl" Type="VI" URL="../Provider/Support/stopMechanismType.ctl">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 			</Item>
@@ -98,6 +107,9 @@
 		<Item Name="Tests" Type="Folder">
 			<Item Name="readme.txt" Type="Document" URL="../../tests/readme.txt"/>
 			<Item Name="TLC_Daemon_Tests.lvproj" Type="Document" URL="../../tests/TLC_Daemon_Tests.lvproj"/>
+		</Item>
+		<Item Name="processTask.vi" Type="VI" URL="../Provider/Support/processTask.vi">
+			<Property Name="marked" Type="Int">0</Property>
 		</Item>
 		<Item Name="TLC_Daemon.lvlib" Type="Library" URL="../TLC_Daemon.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
