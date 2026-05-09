@@ -46,6 +46,9 @@
 				<Item Name="addClassToProject.vi" Type="VI" URL="../Provider/Support/addClassToProject.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="addTaskMethod.vi" Type="VI" URL="../Provider/Support/addTaskMethod.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="buildClassIcon.vi" Type="VI" URL="../Provider/Support/buildClassIcon.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -53,6 +56,12 @@
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="buildITaskMethodPath.vi" Type="VI" URL="../Provider/Support/buildITaskMethodPath.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="buildTaskRef.vi" Type="VI" URL="../Provider/Support/buildTaskRef.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="extractTaslRefTerminal.vi" Type="VI" URL="../Provider/Support/extractTaslRefTerminal.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="getITaskClassPath.vi" Type="VI" URL="../Provider/Support/getITaskClassPath.vi">
@@ -67,6 +76,9 @@
 				<Item Name="getRandomColor.vi" Type="VI" URL="../Provider/Support/getRandomColor.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="getStopMechClassPath.vi" Type="VI" URL="../Provider/Support/getStopMechClassPath.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="ITaskClass_create.vi" Type="VI" URL="../Provider/Support/ITaskClass_create.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -76,6 +88,9 @@
 				<Item Name="processGetStopMech.vi" Type="VI" URL="../Provider/Support/processGetStopMech.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="processTaskRef.vi" Type="VI" URL="../Provider/Support/processTaskRef.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="replaceObjectPlaceHolders_const.vi" Type="VI" URL="../Provider/Support/replaceObjectPlaceHolders_const.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -83,9 +98,6 @@
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 			</Item>
-		</Item>
-		<Item Name="Resource" Type="Folder">
-			<Item Name="ITaskClassTemplate.lvclass" Type="LVClass" URL="../Resource/ITaskClassTemplate/ITaskClassTemplate.lvclass"/>
 		</Item>
 		<Item Name="Templates" Type="Folder">
 			<Item Name="booleanNotifierStopMechanism.vi" Type="VI" URL="../Templates/booleanNotifierStopMechanism.vi">
