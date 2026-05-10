@@ -91,6 +91,9 @@
 				<Item Name="processGetStopMech.vi" Type="VI" URL="../Provider/Support/processGetStopMech.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="processTask.vi" Type="VI" URL="../Provider/Support/processTask.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="processTaskRef.vi" Type="VI" URL="../Provider/Support/processTaskRef.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -122,9 +125,6 @@
 		<Item Name="Tests" Type="Folder">
 			<Item Name="readme.txt" Type="Document" URL="../../tests/readme.txt"/>
 			<Item Name="TLC_Daemon_Tests.lvproj" Type="Document" URL="../../tests/TLC_Daemon_Tests.lvproj"/>
-		</Item>
-		<Item Name="processTask.vi" Type="VI" URL="../Provider/Support/processTask.vi">
-			<Property Name="marked" Type="Int">0</Property>
 		</Item>
 		<Item Name="TLC_Daemon.lvlib" Type="Library" URL="../TLC_Daemon.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">

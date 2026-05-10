@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-05-09 18:07:35" Creator="andre" Comments="" ID="dcb20b95f03fdaf7db53f3ba06db48f0">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-05-10 17:11:11" Creator="andre" Comments="" ID="10a556261d413b778bdad91ad0bb3ae5">
   <Library_General_Settings>
     <Package_File_Name>TLC_Daemon</Package_File_Name>
-    <Library_Version>1.0.0.14</Library_Version>
+    <Library_Version>1.0.0.15</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\source</Library_Source_Folder>
     <Library_Output_Folder>..\distributions</Library_Output_Folder>
@@ -426,7 +426,7 @@ _____________________________________
         <Path>..\source\TaskController\new.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>C32188818166CE540DB1F17FAFC2476F</GUID>
+      <GUID>F18B3B7898B435BE01DAA4376D2DEBA9</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
