@@ -61,7 +61,10 @@
 				<Item Name="buildTaskRef.vi" Type="VI" URL="../Provider/Support/buildTaskRef.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
-				<Item Name="extractTaslRefTerminal.vi" Type="VI" URL="../Provider/Support/extractTaslRefTerminal.vi">
+				<Item Name="classCreationEditor.vi" Type="VI" URL="../Provider/Support/classCreationEditor.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="extractTaskRefTerminal.vi" Type="VI" URL="../Provider/Support/extractTaskRefTerminal.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="getITaskClassPath.vi" Type="VI" URL="../Provider/Support/getITaskClassPath.vi">
