@@ -100,6 +100,9 @@
 				<Item Name="replaceObjectPlaceHolders_const.vi" Type="VI" URL="../Provider/Support/replaceObjectPlaceHolders_const.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="replaceUnsupportedChars.vi" Type="VI" URL="../Provider/Support/replaceUnsupportedChars.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="stopMechanismType.ctl" Type="VI" URL="../Provider/Support/stopMechanismType.ctl">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -279,10 +282,19 @@
 				<Item Name="TRef TravTarget.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef TravTarget.ctl">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="Trim Whitespace One-Sided.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace One-Sided.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="Unflatten Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pixmap.llb/Unflatten Pixmap.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="VI Scripting - Traverse.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/traverseref.llb/VI Scripting - Traverse.lvlib"/>
+				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
