@@ -129,6 +129,7 @@
 			<Item Name="readme.txt" Type="Document" URL="../../tests/readme.txt"/>
 			<Item Name="TLC_Daemon_Tests.lvproj" Type="Document" URL="../../tests/TLC_Daemon_Tests.lvproj"/>
 		</Item>
+		<Item Name="buildClassFolder.vi" Type="VI" URL="../Provider/Support/buildClassFolder.vi"/>
 		<Item Name="TLC_Daemon.lvlib" Type="Library" URL="../TLC_Daemon.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
