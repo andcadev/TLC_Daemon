@@ -107,6 +107,11 @@
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 			</Item>
+			<Item Name="Tools" Type="Folder">
+				<Item Name="tools_createNewITaskClass.vi" Type="VI" URL="../Provider/Tools/tools_createNewITaskClass.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+			</Item>
 		</Item>
 		<Item Name="Templates" Type="Folder">
 			<Item Name="booleanNotifierStopMechanism.vi" Type="VI" URL="../Templates/booleanNotifierStopMechanism.vi">
@@ -129,8 +134,13 @@
 			<Item Name="readme.txt" Type="Document" URL="../../tests/readme.txt"/>
 			<Item Name="TLC_Daemon_Tests.lvproj" Type="Document" URL="../../tests/TLC_Daemon_Tests.lvproj"/>
 		</Item>
-		<Item Name="buildClassFolder.vi" Type="VI" URL="../Provider/Support/buildClassFolder.vi"/>
+		<Item Name="buildClassFolder.vi" Type="VI" URL="../Provider/Support/buildClassFolder.vi">
+			<Property Name="marked" Type="Int">0</Property>
+		</Item>
 		<Item Name="TLC_Daemon.lvlib" Type="Library" URL="../TLC_Daemon.lvlib"/>
+		<Item Name="updateWarning.vi" Type="VI" URL="../Provider/Support/updateWarning.vi">
+			<Property Name="marked" Type="Int">0</Property>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Alignment.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/lv_icon/Controls/Alignment.ctl">
