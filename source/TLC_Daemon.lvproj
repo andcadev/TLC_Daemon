@@ -49,6 +49,9 @@
 				<Item Name="addTaskMethod.vi" Type="VI" URL="../Provider/Support/addTaskMethod.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="buildClassFolder.vi" Type="VI" URL="../Provider/Support/buildClassFolder.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="buildClassIcon.vi" Type="VI" URL="../Provider/Support/buildClassIcon.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -133,9 +136,6 @@
 		<Item Name="Tests" Type="Folder">
 			<Item Name="readme.txt" Type="Document" URL="../../tests/readme.txt"/>
 			<Item Name="TLC_Daemon_Tests.lvproj" Type="Document" URL="../../tests/TLC_Daemon_Tests.lvproj"/>
-		</Item>
-		<Item Name="buildClassFolder.vi" Type="VI" URL="../Provider/Support/buildClassFolder.vi">
-			<Property Name="marked" Type="Int">0</Property>
 		</Item>
 		<Item Name="TLC_Daemon.lvlib" Type="Library" URL="../TLC_Daemon.lvlib"/>
 		<Item Name="updateWarning.vi" Type="VI" URL="../Provider/Support/updateWarning.vi">
