@@ -91,6 +91,9 @@
 				<Item Name="newITaskClass.vi" Type="VI" URL="../Provider/Support/newITaskClass.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="openPathInExplorer.vi" Type="VI" URL="../Provider/Support/openPathInExplorer.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="processGetStopMech.vi" Type="VI" URL="../Provider/Support/processGetStopMech.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -109,9 +112,22 @@
 				<Item Name="stopMechanismType.ctl" Type="VI" URL="../Provider/Support/stopMechanismType.ctl">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="updateWarning.vi" Type="VI" URL="../Provider/Support/updateWarning.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 			</Item>
 			<Item Name="Tools" Type="Folder">
+				<Item Name="Daemon.txt" Type="Document" URL="../Provider/Tools/Daemon.txt"/>
 				<Item Name="tools_createNewITaskClass.vi" Type="VI" URL="../Provider/Tools/tools_createNewITaskClass.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="tools_openExampleFolder.vi" Type="VI" URL="../Provider/Tools/tools_openExampleFolder.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="tools_openLibraryRootFolder.vi" Type="VI" URL="../Provider/Tools/tools_openLibraryRootFolder.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="tools_openWebPage.vi" Type="VI" URL="../Provider/Tools/tools_openWebPage.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 			</Item>
@@ -138,9 +154,6 @@
 			<Item Name="TLC_Daemon_Tests.lvproj" Type="Document" URL="../../tests/TLC_Daemon_Tests.lvproj"/>
 		</Item>
 		<Item Name="TLC_Daemon.lvlib" Type="Library" URL="../TLC_Daemon.lvlib"/>
-		<Item Name="updateWarning.vi" Type="VI" URL="../Provider/Support/updateWarning.vi">
-			<Property Name="marked" Type="Int">0</Property>
-		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Alignment.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/lv_icon/Controls/Alignment.ctl">
@@ -206,6 +219,9 @@
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="Escape Characters for HTTP.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Escape Characters for HTTP.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="FixBadRect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pictutil.llb/FixBadRect.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -254,6 +270,24 @@
 				<Item Name="LVPointTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVPointTypeDef.ctl">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
+				<Item Name="Open URL in Default Browser (path).vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser (path).vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="Open URL in Default Browser (string).vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser (string).vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="Open URL in Default Browser core.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser core.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="Open URL in Default Browser.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/browser.llb/Open URL in Default Browser.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="Path to URL inner.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL inner.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="Path to URL.vi" Type="VI" URL="/&lt;vilib&gt;/printing/PathToURL.llb/Path to URL.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
 				<Item Name="Pathes.ctl" Type="VI" URL="/&lt;vilib&gt;/LabVIEW Icon API/lv_icon/Controls/Pathes.ctl">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -285,6 +319,9 @@
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="sub_Random U32.vi" Type="VI" URL="/&lt;vilib&gt;/numeric/sub_Random U32.vi">
+					<Property Name="marked" Type="Int">0</Property>
+				</Item>
+				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="TRef Traverse.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/TRef Traverse.vi">

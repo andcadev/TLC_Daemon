@@ -1,0 +1,6 @@
+tools_createNewITaskClass
+-
+tools_openLibraryRootFolder
+tools_openExampleFolder
+-
+tools_openWebPage
