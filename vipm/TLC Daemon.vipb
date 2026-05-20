@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-05-17 21:08:31" Creator="andre" Comments="" ID="70801b882706ddf0ea61ae51f14cf9a7">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-05-20 21:16:35" Creator="andre" Comments="" ID="fc0a29560023fae4a5a90c305bef61f6">
   <Library_General_Settings>
     <Package_File_Name>TLC_Daemon</Package_File_Name>
-    <Library_Version>1.0.0.20</Library_Version>
+    <Library_Version>1.0.0.26</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\source</Library_Source_Folder>
     <Library_Output_Folder>..\distributions</Library_Output_Folder>
@@ -87,7 +87,7 @@ https://github.com/andcadev/TLC_Daemon</Description>
       <Tools_Menu>
         <LLB>false</LLB>
         <Preserve_Hierarchy>true</Preserve_Hierarchy>
-        <Path>&lt;project&gt;\TLC (The LabVIEW Corner)\Daemon</Path>
+        <Path>&lt;project&gt;\TLC - The LabVIEW Corner\Daemon</Path>
       </Tools_Menu>
       <Help_Menu>
         <LLB>false</LLB>
@@ -447,7 +447,7 @@ _____________________________________
         <Path>..\source\TaskController\new.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>35681A6862752973ADE1314A0EE15D1B</GUID>
+      <GUID>B4EF65F503975A251E1A57F5DE57693E</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
