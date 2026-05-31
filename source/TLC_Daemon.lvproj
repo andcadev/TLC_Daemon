@@ -17,7 +17,8 @@
 		<Item Name="Examples" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="Example_Bool_Notifier_StopMech" Type="Folder">
-				<Item Name="Example_Bool_Stop_Mechanism.lvproj" Type="Document" URL="../Examples/Example_Bool_Notifier_StopMech/Example_Bool_Stop_Mechanism.lvproj"/>
+				<Property Name="NI.SortType" Type="Int">3</Property>
+				<Item Name="TLC Daemon - Bool Stop Mechanism.lvproj" Type="Document" URL="../Examples/Example_Bool_Notifier_StopMech/TLC Daemon - Bool Stop Mechanism.lvproj"/>
 				<Item Name="example_multipleRun_stopNotifier.vi" Type="VI" URL="../Examples/Example_Bool_Notifier_StopMech/example_multipleRun_stopNotifier.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
@@ -27,14 +28,16 @@
 				<Item Name="Task_BoolStopNotifier.lvclass" Type="LVClass" URL="../Examples/Example_Bool_Notifier_StopMech/Task_BoolStopNotifier/Task_BoolStopNotifier.lvclass"/>
 			</Item>
 			<Item Name="Example_Bool_User_Event_StopMech" Type="Folder">
-				<Item Name="Example_Bool_User_Event_Stop_Mechanism.lvproj" Type="Document" URL="../Examples/Example_Bool_User_Event_StopMech/Example_Bool_User_Event_Stop_Mechanism.lvproj"/>
+				<Property Name="NI.SortType" Type="Int">3</Property>
+				<Item Name="TLC Daemon - Bool User Event Stop Mechanism.lvproj" Type="Document" URL="../Examples/Example_Bool_User_Event_StopMech/TLC Daemon - Bool User Event Stop Mechanism.lvproj"/>
 				<Item Name="example_boolUserEventStopMechanism.vi" Type="VI" URL="../Examples/Example_Bool_User_Event_StopMech/example_boolUserEventStopMechanism.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="Task_BoolUserEventStopMech.lvclass" Type="LVClass" URL="../Examples/Example_Bool_User_Event_StopMech/Task_BoolUserEventStopMech/Task_BoolUserEventStopMech.lvclass"/>
 			</Item>
 			<Item Name="Example_Msg_User_Event_StopMech" Type="Folder">
-				<Item Name="Example_Message_UserEvent_Stop_Mechanism.lvproj" Type="Document" URL="../Examples/Example_Msg_User_Event_StopMech/Example_Message_UserEvent_Stop_Mechanism.lvproj"/>
+				<Property Name="NI.SortType" Type="Int">3</Property>
+				<Item Name="TLC Daemon - Message User Event Stop Mechanism.lvproj" Type="Document" URL="../Examples/Example_Msg_User_Event_StopMech/TLC Daemon - Message User Event Stop Mechanism.lvproj"/>
 				<Item Name="example_msgUserEventStopMechanism.vi" Type="VI" URL="../Examples/Example_Msg_User_Event_StopMech/example_msgUserEventStopMechanism.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
