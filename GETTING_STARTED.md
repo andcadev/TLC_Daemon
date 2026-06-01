@@ -8,4 +8,4 @@ This will create a new class that implements `ITask`, ready to be customized wit
 
 ## Explore the examples
 
-Open the **Example Finder** and search for `daemon`, or go to **Tools > TLC > Daemon > Examples** to browse them directly.
+Open the **LabVIEW Example Finder** and search for `daemon`, or go to **Tools > TLC > Daemon > Examples** to browse them directly.
