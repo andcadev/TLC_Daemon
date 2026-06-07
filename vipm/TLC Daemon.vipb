@@ -1,7 +1,7 @@
-<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-06-01 17:53:38" Creator="andre" Comments="" ID="75d09c29c272bf1b177ba1830bbb59b3">
+<VI_Package_Builder_Settings Version="2020.1" Created_Date="2026-04-04 21:31:18" Modified_Date="2026-06-07 09:57:29" Creator="andre" Comments="" ID="be7fafee8a299602feddfe7c11a7fb69">
   <Library_General_Settings>
     <Package_File_Name>TLC_Daemon</Package_File_Name>
-    <Library_Version>1.0.0.33</Library_Version>
+    <Library_Version>1.0.0.35</Library_Version>
     <Auto_Increment_Version>false</Auto_Increment_Version>
     <Library_Source_Folder>..\source</Library_Source_Folder>
     <Library_Output_Folder>..\distributions</Library_Output_Folder>
@@ -61,7 +61,7 @@ https://github.com/andcadev/TLC_Daemon</Description>
       <Copyright>Copyright (c) 2026 Andrea Cadei</Copyright>
       <Packager>Andrea Cadei (andcadev)</Packager>
       <URL>https://thelabviewcorner.com/</URL>
-      <Release_Notes>First release</Release_Notes>
+      <Release_Notes>Fix 'The suffix used for the library name make it difficult to read'</Release_Notes>
     </Description>
     <Destinations>
       <Toolkit_VIs>
@@ -203,27 +203,27 @@ https://github.com/andcadev/TLC_Daemon</Description>
       </Password_Overrides>
       <Namespace_Overrides>
         <Path>.</Path>
-        <Namespace_Type>Suffix</Namespace_Type>
+        <Namespace_Type>Prefix</Namespace_Type>
         <Namespace/>
       </Namespace_Overrides>
       <Namespace_Overrides>
         <Path>Examples/Example_Bool_User_Event_StopMech</Path>
-        <Namespace_Type>Suffix</Namespace_Type>
+        <Namespace_Type>Prefix</Namespace_Type>
         <Namespace/>
       </Namespace_Overrides>
       <Namespace_Overrides>
         <Path>Examples/Example_Msg_User_Event_StopMech</Path>
-        <Namespace_Type>Suffix</Namespace_Type>
+        <Namespace_Type>Prefix</Namespace_Type>
         <Namespace/>
       </Namespace_Overrides>
       <Namespace_Overrides>
         <Path>TLC_Daemon.lvlib</Path>
-        <Namespace_Type>Suffix</Namespace_Type>
-        <Namespace>__tlc__</Namespace>
+        <Namespace_Type>Prefix</Namespace_Type>
+        <Namespace>__</Namespace>
       </Namespace_Overrides>
       <Namespace_Overrides>
         <Path>Examples/Example_Bool_Notifier_StopMech</Path>
-        <Namespace_Type>Suffix</Namespace_Type>
+        <Namespace_Type>Prefix</Namespace_Type>
         <Namespace/>
       </Namespace_Overrides>
       <Exclusions>
@@ -460,7 +460,7 @@ _____________________________________
         <Path>..\source\TaskController\new.vi</Path>
         <VI_Title/>
       </Items_Data>
-      <GUID>9D9B17B4C50425387F0770E3D01145A1</GUID>
+      <GUID>09E526E4F02CFB76B01D13C04DBD19D8</GUID>
     </Functions_Palette_Data>
   </Library_Palette_Definition>
 </VI_Package_Builder_Settings>
