@@ -14,4 +14,7 @@ Task termination timeout
 <nierror code="6003">
 Invalid reference
 </nierror>
+<nierror code="6004">
+Unsupported operation
+</nierror>
 </nidocument>

@@ -14,14 +14,22 @@
 	</Item>
 	<Item Name="Public" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
+		<Item Name="Ctrls" Type="Folder">
+			<Item Name="msg.ctl" Type="VI" URL="../Ctrls/msg.ctl"/>
+		</Item>
+		<Item Name="Helpers" Type="Folder">
+			<Item Name="toBoolNotifier.vi" Type="VI" URL="../Helpers/toBoolNotifier.vi"/>
+			<Item Name="toBoolUE.vi" Type="VI" URL="../Helpers/toBoolUE.vi"/>
+			<Item Name="toMsgUE.vi" Type="VI" URL="../Helpers/toMsgUE.vi"/>
+		</Item>
 		<Item Name="Interfaces" Type="Folder">
 			<Item Name="ITask.lvclass" Type="LVClass" URL="../ITask/ITask.lvclass"/>
-			<Item Name="ITaskStopMechanism.lvclass" Type="LVClass" URL="../ITaskStopMechanism/ITaskStopMechanism.lvclass"/>
+			<Item Name="ITaskChannel.lvclass" Type="LVClass" URL="../ITaskChannel/ITaskChannel.lvclass"/>
 		</Item>
-		<Item Name="StopMechanisms" Type="Folder">
-			<Item Name="BoolNotifierStopMechanism.lvclass" Type="LVClass" URL="../BoolNotifierStopMech/BoolNotifierStopMechanism.lvclass"/>
-			<Item Name="BoolUserEventStopMechanism.lvclass" Type="LVClass" URL="../BoolUserEventStopMech/BoolUserEventStopMechanism.lvclass"/>
-			<Item Name="MsgUserEventStopMechanism.lvclass" Type="LVClass" URL="../MsgUserEventStopMech/MsgUserEventStopMechanism.lvclass"/>
+		<Item Name="ITaskChannels" Type="Folder">
+			<Item Name="BoolNotifierTaskChannel.lvclass" Type="LVClass" URL="../BoolNotifierTaskChannel/BoolNotifierTaskChannel.lvclass"/>
+			<Item Name="BoolUETaskChannel.lvclass" Type="LVClass" URL="../BoolUETaskChannel/BoolUETaskChannel.lvclass"/>
+			<Item Name="MsgUETaskChannel.lvclass" Type="LVClass" URL="../MsgUETaskChannel/MsgUETaskChannel.lvclass"/>
 		</Item>
 		<Item Name="TaskController.lvclass" Type="LVClass" URL="../TaskController/TaskController.lvclass"/>
 	</Item>
