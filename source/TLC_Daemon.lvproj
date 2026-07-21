@@ -16,7 +16,7 @@
 		</Item>
 		<Item Name="Examples" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
-			<Item Name="Example_Bool_Notifier_StopMech" Type="Folder">
+			<Item Name="Example_Bool_Notifier_TaskChannel" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="TLC Daemon - Bool Stop Mechanism.lvproj" Type="Document" URL="../Examples/Example_Bool_Notifier_StopMech/TLC Daemon - Bool Stop Mechanism.lvproj"/>
 				<Item Name="example_multipleRun_stopNotifier.vi" Type="VI" URL="../Examples/Example_Bool_Notifier_StopMech/example_multipleRun_stopNotifier.vi">
@@ -27,7 +27,7 @@
 				</Item>
 				<Item Name="Task_BoolStopNotifier.lvclass" Type="LVClass" URL="../Examples/Example_Bool_Notifier_StopMech/Task_BoolStopNotifier/Task_BoolStopNotifier.lvclass"/>
 			</Item>
-			<Item Name="Example_Bool_User_Event_StopMech" Type="Folder">
+			<Item Name="Example_Bool_User_Event_TaskChannel" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="TLC Daemon - Bool User Event Stop Mechanism.lvproj" Type="Document" URL="../Examples/Example_Bool_User_Event_StopMech/TLC Daemon - Bool User Event Stop Mechanism.lvproj"/>
 				<Item Name="example_boolUserEventStopMechanism.vi" Type="VI" URL="../Examples/Example_Bool_User_Event_StopMech/example_boolUserEventStopMechanism.vi">
@@ -35,7 +35,7 @@
 				</Item>
 				<Item Name="Task_BoolUserEventStopMech.lvclass" Type="LVClass" URL="../Examples/Example_Bool_User_Event_StopMech/Task_BoolUserEventStopMech/Task_BoolUserEventStopMech.lvclass"/>
 			</Item>
-			<Item Name="Example_Msg_User_Event_StopMech" Type="Folder">
+			<Item Name="Example_Msg_User_Event_TaskChannel" Type="Folder">
 				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="TLC Daemon - Message User Event Stop Mechanism.lvproj" Type="Document" URL="../Examples/Example_Msg_User_Event_StopMech/TLC Daemon - Message User Event Stop Mechanism.lvproj"/>
 				<Item Name="example_msgUserEventStopMechanism.vi" Type="VI" URL="../Examples/Example_Msg_User_Event_StopMech/example_msgUserEventStopMechanism.vi">
@@ -136,13 +136,13 @@
 			</Item>
 		</Item>
 		<Item Name="Templates" Type="Folder">
-			<Item Name="booleanNotifierStopMechanism.vi" Type="VI" URL="../Templates/booleanNotifierStopMechanism.vi">
+			<Item Name="booleanNotifierTaskChannel.vi" Type="VI" URL="../Templates/booleanNotifierTaskChannel.vi">
 				<Property Name="marked" Type="Int">0</Property>
 			</Item>
-			<Item Name="booleanUserEventStopMechanism.vi" Type="VI" URL="../Templates/booleanUserEventStopMechanism.vi">
+			<Item Name="booleanUserEventTaskChannel.vi" Type="VI" URL="../Templates/booleanUserEventTaskChannel.vi">
 				<Property Name="marked" Type="Int">0</Property>
 			</Item>
-			<Item Name="messageUserEventStopMechanism.vi" Type="VI" URL="../Templates/messageUserEventStopMechanism.vi">
+			<Item Name="messageUserEventTaskChannel.vi" Type="VI" URL="../Templates/messageUserEventTaskChannel.vi">
 				<Property Name="marked" Type="Int">0</Property>
 			</Item>
 			<Item Name="taskControllerExample.vi" Type="VI" URL="../Templates/taskControllerExample.vi">

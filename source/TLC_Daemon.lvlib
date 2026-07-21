@@ -27,9 +27,11 @@
 			<Item Name="ITaskChannel.lvclass" Type="LVClass" URL="../ITaskChannel/ITaskChannel.lvclass"/>
 		</Item>
 		<Item Name="ITaskChannels" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="BoolNotifierTaskChannel.lvclass" Type="LVClass" URL="../BoolNotifierTaskChannel/BoolNotifierTaskChannel.lvclass"/>
 			<Item Name="BoolUETaskChannel.lvclass" Type="LVClass" URL="../BoolUETaskChannel/BoolUETaskChannel.lvclass"/>
 			<Item Name="MsgUETaskChannel.lvclass" Type="LVClass" URL="../MsgUETaskChannel/MsgUETaskChannel.lvclass"/>
+			<Item Name="MsgQueueTaskChannel.lvclass" Type="LVClass" URL="../MsgQueueTaskChannel/MsgUETaskChannel/MsgQueueTaskChannel.lvclass"/>
 		</Item>
 		<Item Name="TaskController.lvclass" Type="LVClass" URL="../TaskController/TaskController.lvclass"/>
 	</Item>
