@@ -145,6 +145,9 @@
 			<Item Name="messageUserEventTaskChannel.vi" Type="VI" URL="../Templates/messageUserEventTaskChannel.vi">
 				<Property Name="marked" Type="Int">0</Property>
 			</Item>
+			<Item Name="msgQueueTaskChannel.vi" Type="VI" URL="../Templates/msgQueueTaskChannel.vi">
+				<Property Name="marked" Type="Int">0</Property>
+			</Item>
 			<Item Name="taskControllerExample.vi" Type="VI" URL="../Templates/taskControllerExample.vi">
 				<Property Name="marked" Type="Int">0</Property>
 			</Item>

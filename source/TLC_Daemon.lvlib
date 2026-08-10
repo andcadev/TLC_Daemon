@@ -18,9 +18,11 @@
 			<Item Name="msg.ctl" Type="VI" URL="../Ctrls/msg.ctl"/>
 		</Item>
 		<Item Name="Helpers" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="toBoolNotifier.vi" Type="VI" URL="../Helpers/toBoolNotifier.vi"/>
 			<Item Name="toBoolUE.vi" Type="VI" URL="../Helpers/toBoolUE.vi"/>
 			<Item Name="toMsgUE.vi" Type="VI" URL="../Helpers/toMsgUE.vi"/>
+			<Item Name="toMsgQueue.vi" Type="VI" URL="../Helpers/toMsgQueue.vi"/>
 		</Item>
 		<Item Name="Interfaces" Type="Folder">
 			<Item Name="ITask.lvclass" Type="LVClass" URL="../ITask/ITask.lvclass"/>
@@ -31,7 +33,7 @@
 			<Item Name="BoolNotifierTaskChannel.lvclass" Type="LVClass" URL="../BoolNotifierTaskChannel/BoolNotifierTaskChannel.lvclass"/>
 			<Item Name="BoolUETaskChannel.lvclass" Type="LVClass" URL="../BoolUETaskChannel/BoolUETaskChannel.lvclass"/>
 			<Item Name="MsgUETaskChannel.lvclass" Type="LVClass" URL="../MsgUETaskChannel/MsgUETaskChannel.lvclass"/>
-			<Item Name="MsgQueueTaskChannel.lvclass" Type="LVClass" URL="../MsgQueueTaskChannel/MsgUETaskChannel/MsgQueueTaskChannel.lvclass"/>
+			<Item Name="MsgQueueTaskChannel.lvclass" Type="LVClass" URL="../MsgQueueTaskChannel/MsgQueueTaskChannel.lvclass"/>
 		</Item>
 		<Item Name="TaskController.lvclass" Type="LVClass" URL="../TaskController/TaskController.lvclass"/>
 	</Item>
