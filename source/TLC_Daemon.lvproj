@@ -85,7 +85,7 @@
 				<Item Name="getRandomColor.vi" Type="VI" URL="../Provider/Support/getRandomColor.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
-				<Item Name="getStopMechClassPath.vi" Type="VI" URL="../Provider/Support/getStopMechClassPath.vi">
+				<Item Name="getTaskChannelClassPath.vi" Type="VI" URL="../Provider/Support/getTaskChannelClassPath.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="ITaskClass_create.vi" Type="VI" URL="../Provider/Support/ITaskClass_create.vi">
@@ -97,10 +97,10 @@
 				<Item Name="openPathInExplorer.vi" Type="VI" URL="../Provider/Support/openPathInExplorer.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
-				<Item Name="processGetStopMech.vi" Type="VI" URL="../Provider/Support/processGetStopMech.vi">
+				<Item Name="processTask.vi" Type="VI" URL="../Provider/Support/processTask.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
-				<Item Name="processTask.vi" Type="VI" URL="../Provider/Support/processTask.vi">
+				<Item Name="processTaskChannel.vi" Type="VI" URL="../Provider/Support/processTaskChannel.vi">
 					<Property Name="marked" Type="Int">0</Property>
 				</Item>
 				<Item Name="processTaskRef.vi" Type="VI" URL="../Provider/Support/processTaskRef.vi">
